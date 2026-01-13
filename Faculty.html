@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Faculty | G.Co-Ed SSS B-3 Paschim Vihar</title>
+    <meta name="description" content="Meet the dedicated and highly qualified teaching faculty of Govt. Co-Ed Sr. Sec. School B-3 Paschim Vihar." />
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+    <style>
+        :root {
+            --primary: #0d47a1;
+            --secondary: #1976d2;
+            --accent: #42a5f5;
+            --light: #f5f7fa;
+            --dark: #1a2b3c;
+            --gray: #64748b;
+            --gold: #ff9800;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Hind', 'Poppins', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+        }
+        h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 700; }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(rgba(13,71,161,0.92), rgba(25,118,210,0.95)),
+                        url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80') center/cover no-repeat;
+            height: 60vh;
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .page-header::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.4);
+        }
+        .header-content {
+            position: relative; z-index: 2; max-width: 900px; padding: 20px;
+        }
+        .header-content h1 {
+            font-size: 4.8rem; font-weight: 800; margin-bottom: 15px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+        }
+        .header-content p {
+            font-size: 1.6rem; opacity: 0.95;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(13, 71, 161, 0.98);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .nav-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+        }
+        .logo { color: white; font-weight: 700; font-size: 1.5rem; text-decoration: none; }
+        .nav-menu a {
+            color: white; text-decoration: none; padding: 12px 20px;
+            border-radius: 30px; font-weight: 500; transition: all 0.3s;
+        }
+        .nav-menu a:hover { background: rgba(255,255,255,0.2); }
+
+        /* Main Content */
+        .container {
+            max-width: 1300px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+        .intro-section {
+            text-align: center;
+            background: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            margin-bottom: 80px;
+        }
+        .intro-section p {
+            font-size: 1.25rem;
+            line-height: 1.9;
+            color: #444;
+            max-width: 900px;
+            margin: 0 auto 20px auto;
+        }
+        .intro-section b { color: var(--primary); }
+        .intro-section u { text-decoration: none; border-bottom: 3px solid var(--accent); }
+
+        /* Stream Selector */
+        .stream-selector {
+            text-align: center;
+            margin: 80px 0;
+        }
+        .stream-selector h2 {
+            font-size: 2.4rem;
+            color: var(--primary);
+            margin-bottom: 35px;
+        }
+        select {
+            padding: 18px 35px;
+            font-size: 1.25rem;
+            border: none;
+            border-radius: 50px;
+            background: var(--primary);
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(13,71,161,0.35);
+            transition: all 0.3s;
+            min-width: 320px;
+        }
+        select:hover {
+            background: var(--secondary);
+            transform: translateY(-4px);
+        }
+        select:focus { outline: none; }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: #ccc;
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 100px;
+        }
+        .back-home {
+            display: inline-block;
+            background: var(--gold);
+            color: white;
+            padding: 14px 38px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            box-shadow: 0 8px 25px rgba(255,152,0,0.4);
+            transition: all 0.3s;
+        }
+        .back-home:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255,152,0,0.5);
+        }
+
+        @media (max-width: 768px) {
+            .header-content h1 { font-size: 3.5rem; }
+            .header-content p { font-size: 1.4rem; }
+            .intro-section { padding: 40px 20px; }
+            select { min-width: 280px; padding: 16px 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="header-content">
+            <h1>Our Faculty</h1>
+            <p>The Pioneers of Education</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="Website.html" class="logo">G.Co-Ed SSS B-3</a>
+            <div class="nav-menu">
+                <a href="Website.html">Home</a>
+                <a href="Infrastructure.html">Infrastructure</a>
+                <a href="Faculty.html">Faculty</a>
+                <a href="Achievements.html">Achievements</a>
+                <a href="Ideals.html">Our Ideals</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Intro Section -->
+    <div class="container">
+        <div class="intro-section">
+            <p>
+                Welcome to the heart of <b>G.Co-Ed SSS B-3 Paschim Vihar</b> – our exceptional teaching faculty. Our teachers are more than educators; they are <u>passionate mentors, skilled guides, and lifelong learners</u> who bring expertise, warmth, and creativity into every classroom.
+            </p>
+            <p>
+                Hand-selected for their deep subject knowledge, commitment to child-centered teaching, and genuine care for each student’s growth, they inspire curiosity, foster resilience, and build strong relationships that make learning both challenging and joyful.
+            </p>
+            <p style="margin-top:25px; font-weight:600; color:var(--primary);">
+                We are immensely proud of the dedicated professionals who make our school a <i>truly nurturing and transformative place to learn.</i>
+            </p>
+        </div>
+
+        <!-- Stream Selector -->
+        <div class="stream-selector">
+            <h2>Explore Teachers by Stream</h2>
+            <select onchange="if(this.value) window.location.href=this.value;">
+                <option value="">-- Select a Stream --</option>
+                <option value="Science.html">Science Stream</option>
+                <option value="Commerce.html">Commerce Stream</option>
+                <option value="Arts.html">Arts / Humanities Stream</option>
+                <option value="Language.html">Language Department</option>
+            </select>
+        </div>
+
+        <div style="text-align:center; margin-top:70px;">
+            <a href="Website.html" class="back-home">Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Govt. Co-Ed Sr. Sec. School B-3 Paschim Vihar, New Delhi | Proudly Serving the Community</p>
+    </footer>
+
+</body>
+</html>

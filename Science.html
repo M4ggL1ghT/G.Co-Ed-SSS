@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Science Faculty | G.Co-Ed SSS B-3 Paschim Vihar</title>
+    <meta name="description" content="Meet the dedicated Science Faculty of Govt. Co-Ed Sr. Sec. School B-3 Paschim Vihar." />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+    <style>
+        :root {
+            --primary: #0d47a1;
+            --secondary: #1976d2;
+            --accent: #42a5f5;
+            --light: #f5f7fa;
+            --dark: #1a2b3c;
+            --gold: #ff9800;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Hind', 'Poppins', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+        }
+        h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 700; }
+
+        /* Header */
+        .page-header {
+            background: linear-gradient(rgba(13,71,161,0.92), rgba(25,118,210,0.95)),
+                        url('https://images.unsplash.com/photo-1581092580490-4d83e9f52c12?auto=format&fit=crop&q=80') center/cover no-repeat;
+            height: 60vh;
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .page-header::before {
+            content: ''; position: absolute; inset: 0;
+            background: rgba(0,0,0,0.45);
+        }
+        .header-content {
+            position: relative; z-index: 2; max-width: 900px; padding: 20px;
+        }
+        .header-content h1 {
+            font-size: 4.8rem; font-weight: 800; margin-bottom: 15px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+        }
+        .header-content p { font-size: 1.6rem; opacity: 0.95; }
+
+        /* Navigation */
+        nav {
+            background: rgba(13, 71, 161, 0.98);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .nav-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+        }
+        .logo { color: white; font-weight: 700; font-size: 1.5rem; text-decoration: none; }
+        .nav-menu a {
+            color: white; text-decoration: none; padding: 12px 20px;
+            border-radius: 30px; font-weight: 500; transition: all 0.3s;
+        }
+        .nav-menu a:hover { background: rgba(255,255,255,0.2); }
+
+        /* Main Content */
+        .container {
+            max-width: 1100px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+        .intro-text {
+            text-align: center;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            color: #444;
+            max-width: 900px;
+            margin: 0 auto 60px auto;
+        }
+        .intro-text strong { color: var(--primary); }
+
+        /* Faculty Grid – Auto-centers last item when odd number */
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            justify-content: center;           /* This centers the entire row */
+            justify-items: center;             /* This centers individual cards */
+        }
+        .faculty-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            text-align: center;
+            width: 300px;                      /* Fixed width for perfect alignment */
+        }
+        .faculty-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+        }
+        .faculty-img {
+            height: 300px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .faculty-img i {
+            font-size: 6.5rem;
+            color: white;
+            opacity: 0.9;
+        }
+        .faculty-info {
+            padding: 30px 25px;
+        }
+        .faculty-info h3 {
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .faculty-info .role {
+            font-size: 1.1rem;
+            color: var(--gray);
+            font-style: italic;
+        }
+
+        /* Modern Marquee */
+        .modern-marquee {
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--primary));
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin: 70px auto 0;
+            border-radius: 20px;
+            font-size: 1.3rem;
+            font-weight: 500;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(13,71,161,0.3);
+        }
+        .marquee-text {
+            display: inline-block;
+            padding-left: 100%;
+            white-space: nowrap;
+            animation: marquee 18s linear infinite;
+        }
+        @keyframes marquee {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Buttons & Footer */
+        .back-home {
+            display: inline-block;
+            background: var(--gold);
+            color: white;
+            padding: 14px 38px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 50px auto 0;
+            box-shadow: 0 8px 25px rgba(255,152,0,0.4);
+            transition: all 0.3s;
+        }
+        .back-home:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255,152,0,0.5);
+        }
+        footer {
+            background: var(--dark);
+            color: #ccc;
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 100px;
+        }
+
+        @media (max-width: 768px) {
+            .header-content h1 { font-size: 3.5rem; }
+            .header-content p { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="page-header">
+        <div class="header-content">
+            <h1>Science Faculty</h1>
+            <p>Inspiring Curiosity & Innovation</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">G.Co-Ed SSS B-3</a>
+            <div class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="Infrastructure.html">Infrastructure</a>
+                <a href="Faculty.html">Faculty</a>
+                <a href="Achievements.html">Achievements</a>
+                <a href="Ideals.html">Our Ideals</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <p class="intro-text">
+            Welcome to the <strong>Science Faculty</strong> of <strong>G.Co-Ed SSS B-3 Paschim Vihar</strong>. Our passionate and highly qualified science teachers ignite curiosity through hands-on experiments, cutting-edge labs, and real-world exploration. Dedicated to fostering critical thinking and a lifelong love of discovery, they inspire every student to question, innovate, and excel in the wonders of science.
+        </p>
+
+        <div class="faculty-grid">
+            <div class="faculty-card">
+                <div class="faculty-img"><i class="fas fa-atom"></i></div>
+                <div class="faculty-info">
+                    <h3>Devinder Kumar</h3>
+                    <p class="role">PGT Physics Lecturer</p>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-img"><i class="fas fa-dna"></i></div>
+                <div class="faculty-info">
+                    <h3>Gurleen Kaur</h3>
+                    <p class="role">TGT Natural Science</p>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-img"><i class="fas fa-square-root-alt"></i></div>
+                <div class="faculty-info">
+                    <h3>Sunil Dabas</h3>
+                    <p class="role">TGT Mathematics</p>
+                </div>
+            </div>
+
+            <!-- This one will now be perfectly centered when alone on last row -->
+            <div class="faculty-card">
+                <div class="faculty-img"><i class="fas fa-leaf"></i></div>
+                <div class="faculty-info">
+                    <h3>Sonika Rathee</h3>
+                    <p class="role">TGT Natural Science</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modern & Beautiful Marquee -->
+        <div class="modern-marquee">
+            <div class="marquee-text">
+                They are trailblazers who have indelibly shaped the trajectory of our scientific inquiry.
+                &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
+                They are trailblazers who have indelibly shaped the trajectory of our scientific inquiry.
+            </div>
+        </div>
+
+        <div style="text-align:center;">
+            <a href="Faculty.html" class="back-home">Back to Faculty</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Govt. Co-Ed Sr. Sec. School B-3 Paschim Vihar, New Delhi | Delhi Government Education Department</p>
+    </footer>
+
+</body>
+</html>

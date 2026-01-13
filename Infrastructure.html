@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infrastructure | G.Co-Ed SSS B-3 Paschim Vihar</title>
+    <meta name="description" content="Explore the modern infrastructure and world-class facilities at Govt. Co-Ed Sr. Sec. School B-3 Paschim Vihar, New Delhi." />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+    <style>
+        :root {
+            --primary: #0d47a1;
+            --secondary: #1976d2;
+            --accent: #42a5f5;
+            --light: #f5f7fa;
+            --dark: #1a2b3c;
+            --gray: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Hind', 'Poppins', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+        }
+        h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 700; }
+
+        /* Header */
+        .page-header {
+            background: linear-gradient(rgba(13,71,161,0.9), rgba(25,118,210,0.95)),
+                        url('https://images.unsplash.com/photo-1588075592446-4b9c2f4c2d1e?auto=format&fit=crop&q=80') center/cover no-repeat;
+            height: 60vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.4);
+        }
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        .header-content h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+        }
+        .header-content p {
+            font-size: 1.5rem;
+            opacity: 0.95;
+        }
+
+        /* Navigation (same as homepage) */
+        nav {
+            background: rgba(13, 71, 161, 0.98);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .nav-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+        }
+        .logo { color: white; font-weight: 700; font-size: 1.5rem; text-decoration: none; }
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .nav-menu a:hover { background: rgba(255,255,255,0.2); }
+
+        /* Main Content */
+        .container {
+            max-width: 1300px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+        .intro-text {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+            color: #444;
+            line-height: 1.8;
+        }
+        .intro-text strong { color: var(--primary); }
+
+        /* Facilities Grid */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        .facility-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+        }
+        .facility-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+        }
+        .facility-img {
+            height: 220px;
+            overflow: hidden;
+        }
+        .facility-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .facility-card:hover img { transform: scale(1.12); }
+        .facility-content {
+            padding: 25px;
+        }
+        .facility-content i {
+            font-size: 2.8rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        .facility-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+        .facility-content p {
+            color: #555;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: #ccc;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+        }
+        .back-home {
+            display: inline-block;
+            background: #ff9800;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            box-shadow: 0 8px 25px rgba(255,152,0,0.4);
+            transition: all 0.3s;
+        }
+        .back-home:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255,152,0,0.5);
+        }
+
+        @media (max-width: 768px) {
+            .header-content h1 { font-size: 3.2rem; }
+            .header-content p { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="header-content">
+            <h1>Infrastructure</h1>
+            <p>Modern Facilities for Holistic Development</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="Website.html" class="logo">G.Co-Ed SSS B-3</a>
+            <div class="nav-menu">
+                <a href="Website.html">Home</a>
+                <a href="Infrastructure.html">Infrastructure</a>
+                <a href="Faculty.html">Faculty</a>
+                <a href="Achievements.html">Achievements</a>
+                <a href="Ideals.html">Our Ideals</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <p class="intro-text">
+            At <strong>Govt. Co-Ed Sr. Sec. School B-3 Paschim Vihar</strong>, we believe that a conducive and modern learning environment is key to nurturing young minds. Our campus is equipped with state-of-the-art facilities that support academic excellence, physical development, and creative expression.
+        </p>
+
+        <div class="facilities-grid">
+
+            <div class="facility-card">
+                <div class="facility-img">
+                    <img src="C:\Users\mggli\OneDrive\Pictures\Screenshots\spacious.png" alt="Spacious Classrooms">
+                </div>
+                <div class="facility-content">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Spacious Classrooms</h3>
+                    <p>Well-ventilated, spacious classrooms equipped with projectors, and comfortable seating.</p>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-img">
+                    <img src="C:\Users\mggli\OneDrive\Pictures\Screenshots\lab.png" alt="Science Labs">
+                </div>
+                <div class="facility-content">
+                    <i class="fas fa-flask"></i>
+                    <h3>Science Laboratories</h3>
+                    <p>Fully equipped Physics, Chemistry & Biology labs with modern apparatus for practical learning.</p>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-img">
+                    <img src="C:\Users\mggli\OneDrive\Pictures\Screenshots\it.png" alt="Computer Lab">
+                </div>
+                <div class="facility-content">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Computer Lab</h3>
+                    <p>High-speed internet, latest computers, and software to prepare students for the digital world.</p>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-img">
+                    <img src="C:\Users\mggli\OneDrive\Pictures\Screenshots\lib.png" alt="Library">
+                </div>
+                <div class="facility-content">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Rich Library</h3>
+                    <p>A vast collection of academic books, reference materials, newspapers, and magazines.</p>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-img">
+                    <img src="C:\Users\mggli\OneDrive\Pictures\Screenshots\ground.png" alt="Sports Ground">
+                </div>
+                <div class="facility-content">
+                    <i class="fas fa-futbol"></i>
+                    <h3>Sports Facilities</h3>
+                    <p>Large playground for cricket, football, volleyball, and indoor games like badminton & table tennis.</p>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-img">
+                    <img src="C:\Users\mggli\OneDrive\Pictures\Screenshots\auditorium.png" alt="Auditorium">
+                </div>
+                <div class="facility-content">
+                    <i class="fas fa-microphone-alt"></i>
+                    <h3>Auditorium & Activity Room</h3>
+                    <p>Spacious hall for morning assembly, cultural events, seminars, and annual functions.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align:center;">
+            <a href="Website.html" class="back-home">
+                ← Back to Home
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Govt. Co-Ed Sr. Sec. School B-3 Paschim Vihar, New Delhi | Delhi Government Education Department</p>
+    </footer>
+
+</body>
+</html>
